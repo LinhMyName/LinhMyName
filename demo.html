@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ngọc Rồng Online - Giới Thiệu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #1a1a1a;
+      padding-bottom: 0;
+      overflow-x: hidden;
+    }
+
+    /* Gap between header and content */
+    .intro-gap {
+      width: min(900px, calc(100% - 10px));
+      height: 5px;
+      background: #ff5601;
+      margin: 0 auto;
+      border-radius: 6px;
+    }
+
+    /* Intro Container */
+    .intro-container {
+      width: min(900px, calc(100% - 10px));
+      margin: 5px auto 0;
+      padding: 0;
+      background: #ff5601;
+    }
+
+    /* Intro Blocks */
+    .intro-block {
+      width: 100%;
+      box-sizing: border-box;
+      background: #ffaf4c;
+      border-radius: 0;
+      padding: 30px 20px;
+      margin-bottom: 5px;
+    }
+
+    .intro-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .intro-download-block {
+      padding: 15px 10px;
+    }
+
+    /* ===== DOWNLOAD ICONS - Fixed Version ===== */
+    .download-icons {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 15px;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    .download-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      width: 110px;
+      flex-shrink: 0;
+    }
+
+    /* Icon - fixed height, không bị đẩy lên */
+    .download-item img {
+      height: 56px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      margin-bottom: 8px;
+      background: rgba(255, 255, 255, 0.1); /* Để thấy rõ vùng ảnh */
+      border-radius: 4px;
+      padding: 2px;
+    }
+
+    .download-item figcaption {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      min-height: 28px;
+    }
+
+    .dl-text {
+      font-size: 11px;
+      line-height: 1.3;
+      text-align: center;
+      white-space: nowrap;
+      color: #f0d6c6;
+      font-weight: 600;
+      margin: 1px 0;
+    }
+
+    .dl-text:nth-child(2) {
+      color: #b9a49b;
+      font-weight: 400;
+    }
+
+    /* Content styling */
+    .intro-block h2 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: #8b0000;
+      text-transform: uppercase;
+      background: #ff7f00;
+      padding: 6px 10px;
+      border-radius: 4px;
+    }
+
+    .intro-block p {
+      color: #000;
+      line-height: 1.6;
+      margin: 8px 0;
+      font-size: 13px;
+    }
+
+    .intro-block strong {
+      color: #d34c00;
+    }
+
+    .intro-list {
+      margin: 12px 0 12px 20px;
+      padding-left: 10px;
+      list-style-type: '🔥 ';
+    }
+
+    .intro-list li {
+      color: #000;
+      line-height: 1.6;
+      margin: 8px 0;
+      font-size: 13px;
+    }
+
+    /* Footer */
+    #nro-license-wrap {
+      position: relative;
+      width: 100%;
+      margin: 5px 0 20px 0;
+      overflow: visible;
+    }
+
+    .nro-license-bg {
+      position: relative;
+      width: min(900px, 100%);
+      height: 100px;
+      margin: 0 auto;
+      background: #ff5601;
+      border-radius: 14px;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+      z-index: 1;
+    }
+
+    .nro-license-content {
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: #000;
+      font-size: 11px;
+      line-height: 1.4;
+      z-index: 2;
+      width: 95%;
+      max-width: 850px;
+    }
+
+    .license-link {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .footer-switcher-wrap {
+      position: absolute;
+      left: 50%;
+      bottom: 8px;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    .footer-switcher {
+      padding: 4px 8px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      background: #fff;
+      font-size: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .download-icons {
+        gap: 20px 15px;
+      }
+      
+      .download-item {
+        width: 100px;
+      }
+      
+      .download-item img {
+        height: 48px;
+      }
+      
+      .dl-text {
+        font-size: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .download-item {
+        width: 90px;
+      }
+      
+      .download-item img {
+        height: 42px;
+      }
+      
+      .dl-text {
+        font-size: 9px;
+      }
+      
+      .intro-block {
+        padding: 20px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="intro-gap" aria-hidden="true"></div>
+
+  <main>
+    <section class="intro-container">
+      
+      <!-- Download Icons Block -->
+      <div class="intro-block intro-download-block">
+        <div class="download-icons">
+          <figure class="download-item">
+            <img src="https://via.placeholder.com/80x56/4CAF50/ffffff?text=JAR" alt="Java">
+            <figcaption>
+              <div class="dl-text">247 - JAD</div>
+            </figcaption>
+          </figure>
+          <figure class="download-item">
+            <img src="https://via.placeholder.com/80x56/2196F3/ffffff?text=APK" alt="ANDROID APK">
+            <figcaption>
+              <div class="dl-text">247</div>
+              <div class="dl-text">Hướng dẫn cài</div>
+            </figcaption>
+          </figure>
+          <figure class="download-item">
+            <img src="https://via.placeholder.com/80x56/FF9800/ffffff?text=PLAY" alt="ANDROID Google Play">
+            <figcaption>
+              <div class="dl-text">247</div>
+            </figcaption>
+          </figure>
+          <figure class="download-item">
+            <img src="https://via.placeholder.com/80x56/9C27B0/ffffff?text=PC" alt="PC windows">
+            <figcaption>
+              <div class="dl-text">247</div>
+            </figcaption>
+          </figure>
+          <figure class="download-item">
+            <img src="https://via.placeholder.com/80x56/E91E63/ffffff?text=IOS" alt="IPHONE">
+            <figcaption>
+              <div class="dl-text">IOS</div>
+            </figcaption>
+          </figure>
+          <figure class="download-item">
+            <img src="https://via.placeholder.com/80x56/F44336/ffffff?text=NGOC" alt="NẠP NGỌC">
+            <figcaption>
+              <div class="dl-text">Báo Lỗi SMS</div>
+              <div class="dl-text">Báo Lỗi thẻ</div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Giới thiệu -->
+      <div class="intro-block">
+        <h2>GIỚI THIỆU</h2>
+        <p>Ngọc Rồng Online là Trò Chơi Trực Tuyến với cốt truyện xoay quanh bộ truyện tranh 7 viên Ngọc Rồng. Người chơi sẽ hóa thân thành một trong những anh hùng của 3 hành tinh: Trái Đất, Xayda, Namếc. Cùng luyện tập, tăng cường sức mạnh và kỹ năng. Đoàn kết cùng chiến đấu chống lại các thế lực hung ác. Cùng nhau tranh tài.</p>
+        <p><strong>Đặc điểm nổi bật:</strong></p>
+        <ul class="intro-list">
+          <li>Thể loại hành động, nhập vai. Trực tiếp điều khiển nhân vật hành động. Dễ chơi, dễ điều khiển nhân vật. Đồ họa sắc nét. Có phiên bản đồ họa cao cho điện thoại mạnh và phiên bản pixel cho máy cấu hình thấp.</li>
+          <li>Cốt truyện bám sát nguyên tác. Người chơi sẽ gặp tất cả nhân vật từ Bunma, Quy lão kame, Jacky-chun, Tàu Pảy Pảy... cho đến Fide, Pic, Poc, Xên, Broly, đội Bojack.</li>
+          <li>Đặc điểm nổi bật nhất: Tham gia đánh doanh trại độc nhãn. Tham gia đại hội võ thuật. Tham gia săn lùng ngọc rồng để mang lại điều ước cho bản thân.</li>
+          <li>Tương thích tất cả các dòng máy trên thị trường hiện nay: Máy tính PC, Điện thoại di động Nokia Java, Android, iPhone, Windows Phone, và máy tính bảng Android, iPad.</li>
+        </ul>
+      </div>
+
+      <!-- Giới thiệu chung -->
+      <div class="intro-block">
+        <h2>Giới thiệu chung</h2>
+        <p><strong>1. Class nhân vật:</strong></p>
+        <p>Game được làm dựa trên cốt truyện của bộ truyện tranh nổi tiếng <strong>Dragon Ball</strong>. Người chơi có thể lựa chọn 1 trong 3 hành tinh để bắt đầu cuộc phiêu lưu của mình.</p>
+
+        <p><strong>2. Hệ thống nhà:</strong></p>
+        <ul class="intro-list">
+          <li><strong>Đậu thần</strong>: Là nguồn hồi phục KI và HP chính của chiến binh. Mỗi lần sử dụng sẽ tốn một lượng vàng nhất định tùy theo cấp độ.</li>
+          <li><strong>Rương đồ</strong>: Dùng để chứa các vật phẩm và tài sản quý giá mà người chơi không muốn mang theo. Rương đồ có thể mở rộng bằng ngọc.</li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- License Banner -->
+  <div id="nro-license-wrap">
+    <div aria-hidden="true" class="nro-license-bg"></div>
+    <div class="nro-license-content">
+      <div>Giấy phép cung cấp dịch vụ trò chơi điện tử G1 trên mạng số: 358/GP-BTTTT</div>
+      <div>do Bộ Thông Tin và Truyền Thông cấp ngày 28 tháng 9 năm 2023</div>
+      <div>Bản Quyền thuộc về Gomobi - <a href="#" class="license-link">Điều Khoản Sử Dụng</a></div>
+    </div>
+    <div class="footer-switcher-wrap">
+      <select class="footer-switcher" aria-label="Chọn game">
+        <option selected>Avatar</option>
+        <option>Avatar Musik</option>
+        <option>Mobi Army A</option>
+        <option>Khí Phách Anh Hùng</option>
+        <option>Ninja School Online</option>
+        <option>Chú Bé Rồng</option>
+        <option>Knight Age Online</option>
+        <option>Hải Tặc Tí Hon</option>
+        <option>Sơn Thủy Phân Tranh</option>
+      </select>
+    </div>
+  </div>
+
+</body>
+</html>
